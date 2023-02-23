@@ -7,7 +7,7 @@ module.exports.getPositions = async (req, res) => {
   const description = req.query.description || "";
   const location = req.query.location || "";
   const page = req.query.page || 1;
-  const limit = req.query.limit || 5;
+  const limit = req.query.limit || 10;
   const offset = (page - 1) * limit;
   let type;
   if (isFullTime === "true") {
