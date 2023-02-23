@@ -28,13 +28,14 @@ database.connect((error) => {
 // define main route
 
 app.get("/", (req, res) => {
-  res.status(200).send("<h1>Welcome to Instore API</h1>");
+  res.status(200).send("<h1>Welcome to Agit Project API</h1>");
 });
 
 // routers
 const routers = require("./routers");
 
 app.use("/api", routers.userAuthRouter);
+app.use("/api", routers.positionsRouter);
 
 // binding to local port
 const PORT = process.env.PORT;
